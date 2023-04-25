@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+table{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+header{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1.5em;
+ 
+}
+#pageTitle{
+    font-weight: bold;
+}
+.buttons{
+    display: inline-block;
+    margin-left: 20px;
+    
+}
+input{
+    border-radius: 5px;
+}
+.btn{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
