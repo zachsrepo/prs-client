@@ -12,6 +12,11 @@ import { MenuitemComponent } from './menu/menuitem/menuitem.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserChangeComponent } from './user/user-change/user-change.component';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { VendorChangeComponent } from './vendor/vendor-change/vendor-change.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +27,12 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
     MenuitemComponent,
     UserListComponent,
     UserDetailComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    UserChangeComponent,
+    VendorListComponent,
+    VendorDetailComponent,
+    VendorCreateComponent,
+    VendorChangeComponent
 
   ],
   imports: [

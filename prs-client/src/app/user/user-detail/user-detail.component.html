@@ -34,6 +34,14 @@
                     <td>Email</td>
                     <td><input [(ngModel)]="user.email" readonly></td>
                 </tr>
+                <tr>
+                    <td>Reviewer?</td>
+                    <td><input [(ngModel)]="user.isReviewer" type="checkbox" disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Admin?</td>
+                    <td><input [(ngModel)]="user.isAdmin" type="checkbox" disabled="true"></td>
+                </tr>
             </tbody>
         </table>
         <div class="buttons">

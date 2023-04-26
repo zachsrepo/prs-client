@@ -5,12 +5,24 @@ import { AboutComponent } from './core/about/about.component';
 import { E404Component } from './core/e404/e404.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserChangeComponent } from './user/user-change/user-change.component';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { VendorChangeComponent } from './vendor/vendor-change/vendor-change.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "about", component: AboutComponent},
   {path: "user/list", component: UserListComponent},
   {path: "user/detail/:id", component: UserDetailComponent},
+  {path: "user/create", component: UserCreateComponent},
+  {path: "user/change/:id", component: UserChangeComponent},
+  {path: "vendor/list", component: VendorListComponent},
+  {path: "vendor/create", component: VendorCreateComponent},
+  {path: "vendor/detail/:id", component: VendorDetailComponent},
+  {path: "vendor/change/:id", component: VendorChangeComponent},
 
   {path: "**", component: E404Component}
 ];

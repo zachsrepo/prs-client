@@ -8,10 +8,12 @@ import { Menu } from '../menubar.class';
 })
 export class MenuComponent {
   menus: Menu[] = [
+    new Menu("Home", "/home"),
     new Menu("User", "/user/list"),
     new Menu("Vendor", "/vendor/list"),
     new Menu("Product", "/product/list"),
     new Menu("Request", "/request/list"),
+    new Menu("About", "/About"),
     new Menu("Login", "/user/login")
   ]
 }

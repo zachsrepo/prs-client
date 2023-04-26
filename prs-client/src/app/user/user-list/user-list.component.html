@@ -15,6 +15,8 @@
                 <th>Password</th>
                 <th>Phone</th>
                 <th>Email</th>
+                <th>Reviewer?</th>
+                <th>Admin?</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -26,6 +28,8 @@
                 <td>{{u.password}}</td>
                 <td>{{u.phone}}</td>
                 <td>{{u.email}}</td>
+                <td>{{(u.isReviewer) ? "YES" : "NO"}}</td>
+                <td>{{(u.isAdmin) ? "YES" : "NO"}}</td>
                 <td>
                     <a routerLink="/user/detail/{{u.id}}" class="btn btn-primary btn-sm">Detail</a> | 
                     <a routerLink="/user/change/{{u.id}}" class="btn btn-warning btn-sm">Change</a>
