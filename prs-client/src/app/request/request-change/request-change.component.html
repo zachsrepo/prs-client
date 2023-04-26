@@ -1,0 +1,52 @@
+<div id="component">
+    <app-menu></app-menu>
+    <header>
+        <span id="pageTitle">{{pageTitle}}</span>
+    </header>
+    <main>
+        <table class="table table-striped table-sm">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="request.id" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input [(ngModel)]="request.description"></td>
+                </tr>
+                <tr>
+                    <td>Justification</td>
+                    <td><input [(ngModel)]="request.justification"></td>
+                </tr>
+                <tr>
+                    <td>Rejection Reason</td>
+                    <td><input [ngModel]="request.rejectionReason" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Delivery Mode</td>
+                    <td><input [(ngModel)]="request.deliveryMode"></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><input [ngModel]="request.status" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td><select [(ngModel)]="request.userId" disabled="true">
+                        <option *ngFor="let u of users" value="{{u.id}}">{{u.username}}</option>
+                    </select></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <div class="buttons">
+        <a routerLink="/request/list" class="btn btn-primary btn-sm">Back</a>
+
+        <button (click)="save()" class="btn btn-success btn-sm">Save</button>
+
+     
+        </div>
+        
+    </main>
+</div>

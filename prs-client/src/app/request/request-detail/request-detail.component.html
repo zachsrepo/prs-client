@@ -1,0 +1,53 @@
+<div id="component">
+    <app-menu></app-menu>
+    <header>
+        <span id="pageTitle">{{pageTitle}}</span>
+    </header>
+    <main>
+        <table class="table table-striped table-sm" *ngIf="request">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="request.id" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input [(ngModel)]="request.description" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Justification</td>
+                    <td><input [(ngModel)]="request.justification" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Rejection Reason</td>
+                    <td><input [ngModel]="request.rejectionReason" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Delivery Mode</td>
+                    <td><input [(ngModel)]="request.deliveryMode" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><input [ngModel]="request.status" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td><input [(ngModel)]="request.user.username" readonly disabled="true"></td>
+                </tr>
+                <tr>
+                    <td>User ID</td>
+                    <td><input [(ngModel)]="request.user.id" readonly disabled="true"></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="buttons">
+        <a routerLink="/request/list" class="btn btn-primary btn-sm">Back</a>
+
+        <button (click)="delete()" class="btn btn-danger btn-sm">Delete</button>
+        <button *ngIf="areYouSure" (click)="finalDelete()" class="btn btn-danger btn-sm">ARE YOU SURE?</button>
+     
+        </div>
+        
+    </main>
+</div>

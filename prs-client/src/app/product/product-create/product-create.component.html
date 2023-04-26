@@ -1,0 +1,52 @@
+<div id="component">
+    <app-menu></app-menu>
+    <header>
+        <span id="pageTitle">{{pageTitle}}</span>
+    </header>
+    <main>
+        <table class="table table-striped table-sm" *ngIf="product">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="product.id" readonly></td>
+                </tr>
+                <tr>
+                    <td>Part Number</td>
+                    <td><input [(ngModel)]="product.partNbr"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input [(ngModel)]="product.name"></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input [(ngModel)]="product.price"></td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td><input [(ngModel)]="product.unit"></td>
+                </tr>
+                <tr>
+                    <td>Vendor</td>
+                    <td>
+                        <select [(ngModel)]="product.vendorId">
+                            <option *ngFor="let v of vendors" value="{{v.id}}">{{v.name}}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Photo Path</td>
+                    <td><input [(ngModel)]="product.photoPath" readonly></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="buttons">
+        <a routerLink="/product/list" class="btn btn-primary btn-sm">Back</a>
+
+        <button (click)="save()" class="btn btn-success btn-sm">Save</button>
+     
+        </div>
+        
+    </main>
+</div>
