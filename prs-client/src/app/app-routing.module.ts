@@ -20,6 +20,8 @@ import { RequestDetailComponent } from './request/request-detail/request-detail.
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestChangeComponent } from './request/request-change/request-change.component';
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
+import { RequestlineChangeComponent } from './requestline/requestline-change/requestline-change.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -41,6 +43,8 @@ const routes: Routes = [
   {path: "request/detail/:id", component: RequestDetailComponent},
   {path: "request/change/:id", component: RequestChangeComponent},
   {path: "request/lines/:id", component: RequestLinesComponent},
+  {path: "requestlines/create/:id", component: RequestlineCreateComponent},
+  {path: "requestlines/change/:id/:requestId", component: RequestlineChangeComponent},
 
   
   {path: "**", component: E404Component}

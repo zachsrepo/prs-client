@@ -26,6 +26,8 @@ import { RequestDetailComponent } from './request/request-detail/request-detail.
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestChangeComponent } from './request/request-change/request-change.component';
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
+import { RequestlineChangeComponent } from './requestline/requestline-change/requestline-change.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,9 @@ import { RequestLinesComponent } from './request/request-lines/request-lines.com
     RequestDetailComponent,
     RequestCreateComponent,
     RequestChangeComponent,
-    RequestLinesComponent
+    RequestLinesComponent,
+    RequestlineCreateComponent,
+    RequestlineChangeComponent
 
   ],
   imports: [
