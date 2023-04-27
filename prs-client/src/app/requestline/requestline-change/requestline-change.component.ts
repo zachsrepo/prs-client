@@ -32,7 +32,7 @@ export class RequestlineChangeComponent {
     this.rlsvc.change(this.requestline).subscribe({
       next: (res) => {
         console.debug("Line Updated");
-        this.router.navigateByUrl(`/request/lines/${this.rlId}`)
+        this.router.navigateByUrl(`/request/lines/${this.rId}`)
       },
       error: (err) => {
         console.error(err);

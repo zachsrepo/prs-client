@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VendorService } from '../vendor.service';
 import { Vendor } from '../vendor.class';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-vendor-list',
@@ -11,11 +12,13 @@ export class VendorListComponent {
   pageTitle = "Vendor List";
   vendors: Vendor[] = [];
   constructor(
-    private vensvc: VendorService
+    private vensvc: VendorService,
+    private sys: SystemService
   ){}
 
 
   ngOnInit(): void {
+    this.sys.chkLogin();
     this.vensvc.list().subscribe({
       next: (res) => {
         console.debug(res);

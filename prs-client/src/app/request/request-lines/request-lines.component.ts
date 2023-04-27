@@ -18,6 +18,18 @@ export class RequestLinesComponent {
     private route: ActivatedRoute,
     private rlsvc: RequestlineService
   ){}
+  review(id: number): void {
+    this.reqsvc.review(this.request, id).subscribe({
+      next: (res) => {
+        console.debug("Request Reviewed");
+        console.debug(res)
+        this.refresh();
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    })
+  }
   remove(id: number): void {
     this.rlsvc.remove(id).subscribe({
       next: (res) => {

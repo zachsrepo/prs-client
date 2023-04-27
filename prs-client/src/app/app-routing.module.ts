@@ -22,10 +22,14 @@ import { RequestChangeComponent } from './request/request-change/request-change.
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
 import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
 import { RequestlineChangeComponent } from './requestline/requestline-change/requestline-change.component';
+import { RequestReviewComponent } from './request/request-review/request-review.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { RequestApproverejectComponent } from './request/request-approvereject/request-approvereject.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "about", component: AboutComponent},
+  {path: "user/login", component: UserLoginComponent},
   {path: "user/list", component: UserListComponent},
   {path: "user/detail/:id", component: UserDetailComponent},
   {path: "user/create", component: UserCreateComponent},
@@ -40,9 +44,11 @@ const routes: Routes = [
   {path: "product/create", component: ProductCreateComponent},
   {path: "request/list", component: RequestListComponent},
   {path: "request/create", component: RequestCreateComponent},
+  {path: "request/review", component: RequestReviewComponent},
   {path: "request/detail/:id", component: RequestDetailComponent},
   {path: "request/change/:id", component: RequestChangeComponent},
   {path: "request/lines/:id", component: RequestLinesComponent},
+  {path: "request/statuschange/:id", component: RequestApproverejectComponent},
   {path: "requestlines/create/:id", component: RequestlineCreateComponent},
   {path: "requestlines/change/:id/:requestId", component: RequestlineChangeComponent},
 

@@ -28,6 +28,9 @@ import { RequestChangeComponent } from './request/request-change/request-change.
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
 import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
 import { RequestlineChangeComponent } from './requestline/requestline-change/requestline-change.component';
+import { RequestReviewComponent } from './request/request-review/request-review.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { RequestApproverejectComponent } from './request/request-approvereject/request-approvereject.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +57,10 @@ import { RequestlineChangeComponent } from './requestline/requestline-change/req
     RequestChangeComponent,
     RequestLinesComponent,
     RequestlineCreateComponent,
-    RequestlineChangeComponent
+    RequestlineChangeComponent,
+    RequestReviewComponent,
+    UserLoginComponent,
+    RequestApproverejectComponent
 
   ],
   imports: [
