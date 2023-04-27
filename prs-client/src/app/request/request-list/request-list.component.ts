@@ -11,7 +11,7 @@ import { SystemService } from 'src/app/core/system.service';
 export class RequestListComponent {
   pageTitle = "Request List";
   requests: Request[] = [];
-  
+  userId!: number
 
   constructor(
     private reqsvc: RequestService,
@@ -21,6 +21,7 @@ export class RequestListComponent {
 
   ngOnInit(): void {
     this.sys.chkLogin();
+    this.userId = this.sys.loggedInUserId;
     this.reqsvc.list().subscribe({
       next: (res) => {
         console.debug(res);

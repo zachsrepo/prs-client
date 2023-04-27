@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./request-create.component.css']
 })
 export class RequestCreateComponent {
-  users: User[] = [];
+  user!: User;
   request: Request = new Request();
   pageTitle = "New Request"
   constructor(
@@ -21,6 +21,7 @@ export class RequestCreateComponent {
     private router: Router
   ){}
   save(): void {
+    this.request.userId = this.user.id;
     this.reqsvc.create(this.request).subscribe({
       next: (res) => {
         console.debug("Request Created!");
@@ -33,9 +34,12 @@ export class RequestCreateComponent {
   }
 
   ngOnInit(): void {
-    this.usrsvc.list().subscribe({
+    let userId = this.route.snapshot.params["userId"];
+    
+    this.usrsvc.get(userId).subscribe({
       next: (res) => {
-        this.users = res;
+        this.user = res;
+        
       },
       error: (err) => {
         console.error(err);

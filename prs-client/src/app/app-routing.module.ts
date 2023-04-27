@@ -43,7 +43,7 @@ const routes: Routes = [
   {path: "product/list", component: ProductListComponent},
   {path: "product/create", component: ProductCreateComponent},
   {path: "request/list", component: RequestListComponent},
-  {path: "request/create", component: RequestCreateComponent},
+  {path: "request/create/:userId", component: RequestCreateComponent},
   {path: "request/review", component: RequestReviewComponent},
   {path: "request/detail/:id", component: RequestDetailComponent},
   {path: "request/change/:id", component: RequestChangeComponent},

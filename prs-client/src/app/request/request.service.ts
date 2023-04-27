@@ -37,7 +37,7 @@ export class RequestService {
     return this.http.put(`${this.baseurl}/reject/${id}`,  request) as Observable<any>;
   }
   remove(id: number): Observable<any> {
-    return this.http.delete(`${this.baseurl}`) as Observable<any>;
+    return this.http.delete(`${this.baseurl}/${id}`) as Observable<any>;
   }
 
 }
