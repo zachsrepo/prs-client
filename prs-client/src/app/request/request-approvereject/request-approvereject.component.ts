@@ -27,7 +27,8 @@ export class RequestApproverejectComponent {
     this.reqsvc.approve(this.request, this.id).subscribe({
       next: (res) => {
         console.debug("Request Approved");
-        this.refresh();
+        this.router.navigateByUrl("/request/review");
+        
       },
       error: (err) => {
         console.error(err);
@@ -42,7 +43,7 @@ export class RequestApproverejectComponent {
       next: (res) => {
         console.debug("Request Rejected");
         this.showRejectReason = false;
-        this.router.navigateByUrl("/request/review")
+        this.router.navigateByUrl("/request/review");
       },
       error: (err) => {
         console.error(err);
