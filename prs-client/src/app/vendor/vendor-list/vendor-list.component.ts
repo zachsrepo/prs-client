@@ -11,6 +11,7 @@ import { SystemService } from 'src/app/core/system.service';
 export class VendorListComponent {
   pageTitle = "Vendor List";
   vendors: Vendor[] = [];
+  isAdmin: boolean = false;
   constructor(
     private vensvc: VendorService,
     private sys: SystemService
@@ -19,6 +20,7 @@ export class VendorListComponent {
 
   ngOnInit(): void {
     this.sys.chkLogin();
+    this.isAdmin = this.sys.isAdmin;
     this.vensvc.list().subscribe({
       next: (res) => {
         console.debug(res);

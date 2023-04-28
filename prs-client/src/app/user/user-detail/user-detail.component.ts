@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../user.class';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -12,10 +13,12 @@ export class UserDetailComponent {
   user!: User;
   pageTitle = "User Details";
   areYouSure: boolean = false;
+  isAdmin: boolean = false;
   constructor(
     private usrsvc: UserService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sys: SystemService
   ){}
   
   delete(): void {
@@ -33,6 +36,7 @@ export class UserDetailComponent {
     })
   }
   ngOnInit(): void {
+    this.isAdmin = this.sys.isAdmin;
     let id = Number(this.route.snapshot.params["id"])
     this.usrsvc.get(id).subscribe({
       next: (res) => {

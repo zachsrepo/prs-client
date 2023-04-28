@@ -28,6 +28,7 @@ export class UserLoginComponent {
         this.message = "Login Successful!";
         this.sys.loggedInUser = res;
         this.sys.loggedInUserId = this.sys.loggedInUser.id;
+        this.sys.isAdmin = this.sys.loggedInUser.isAdmin;
         this.router.navigateByUrl("/user/list");
         
       },

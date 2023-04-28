@@ -47,7 +47,7 @@
         <div class="buttons">
         <a routerLink="/vendor/list" class="btn btn-primary btn-sm">Back</a>
 
-        <button (click)="delete()" class="btn btn-danger btn-sm">Delete</button>
+        <button *ngIf="isAdmin" (click)="delete()" class="btn btn-danger btn-sm">Delete</button>
         <button *ngIf="areYouSure" (click)="finalDelete()" class="btn btn-danger btn-sm">ARE YOU SURE?</button>
      
         </div>

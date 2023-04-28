@@ -8,6 +8,7 @@ import { Route, Router } from '@angular/router';
 export class SystemService {
   loggedInUser: User | null = null;
   loggedInUserId: number = 0;
+  isAdmin: boolean = false;
   constructor(
     private router: Router
   ) { }

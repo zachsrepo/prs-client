@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../product.class';
 import { ProductService } from '../product.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -11,12 +12,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ProductDetailComponent {
   pageTitle = "Product Details";
   product!: Product;
+  isAdmin: boolean = false;
 
   areYouSure: boolean = false;
   constructor(
     private psvc: ProductService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sys: SystemService
   ){}
 
   delete(): void {
@@ -34,6 +37,7 @@ export class ProductDetailComponent {
     })
   }
   ngOnInit(): void {
+    this.isAdmin = this.sys.isAdmin;
     let id = Number(this.route.snapshot.params["id"])
     this.psvc.get(id).subscribe({
       next: (res) => {

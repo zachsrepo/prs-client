@@ -1,1 +1,32 @@
 <app-menu></app-menu>
+<header>
+    <span id="pageTitle">{{pageTitle}}</span>
+</header>
+<div>
+    <p>The Purchase Request System (PRS) is the capstone for the MAXimum boot camp and its completion is required for graduation.<br>
+        The back end system is comprised of a Microsoft SQL server database and a C# restful API controller.</p>
+    <p>The database contains five table: User, Vendor, Product, Request, and Requestline.</p>
+    <p>The User table provides two functions:
+        <ul>
+            <li>Provides authentication for users wishing to log in and use the PRS</li>
+            <li>Provides ownership for Requests created (who created and 'owns' them)</li>
+        </ul>
+    
+    <p>The Product table provides two functions:
+        <ul>
+            <li>Provides the list of products that can be added to a RequestLine</li>
+            <li>Provides the name and price of products</li>
+        </ul>
+    <p>The Request table is the heart of the PRS. Together with a collection of RequestLine rows makes up the user's request of products. It has xxx functions:</p>
+        <ul>
+            <li>Provides the grouping for all the products being requested.</li>
+            <li>Provides the user that created the request</li>
+            <li>Provides the total amount of all the products being requested</li>
+        </ul>
+    <p>The RequestLine table implements a many-to-many relationship between the request and product tables.<br>
+        Each request can have multiple requestLines and every product can have multiple lines.<br>
+        This means that every request can be related to multiple products and each product can be related to multiple requests.
+    </p>
+    <p>The RequestLine holds all the product for a particular request.</p>
+  
+</div>

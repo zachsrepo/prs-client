@@ -27,6 +27,7 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { RequestApproverejectComponent } from './request/request-approvereject/request-approvereject.component';
 
 const routes: Routes = [
+  {path: "", component: UserLoginComponent, pathMatch: "full"},
   {path: "home", component: HomeComponent},
   {path: "about", component: AboutComponent},
   {path: "user/login", component: UserLoginComponent},

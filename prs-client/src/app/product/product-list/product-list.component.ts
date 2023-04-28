@@ -11,6 +11,7 @@ import { SystemService } from 'src/app/core/system.service';
 export class ProductListComponent {
   pageTitle = "Product List";
   products: Product[] = [];
+  isAdmin: boolean = false;
   constructor(
     private psvc: ProductService,
     private sys: SystemService
@@ -18,6 +19,7 @@ export class ProductListComponent {
 
   ngOnInit(): void {
     this.sys.chkLogin();
+    this.isAdmin = this.sys.isAdmin;
     this.psvc.list().subscribe({
       next: (res) => {
         console.debug(res);
